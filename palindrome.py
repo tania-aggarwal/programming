@@ -6,7 +6,12 @@ while True:
         continue
 
     if (len(str(n)) > 1) and (n > 0):
-        if str(n) == str(n)[::-1]:
+        n = str(n)
+        temp = ""
+        for i in range(len(n) - 1, -1, -1):
+            temp += n[i]
+
+        if n == temp:
             print("its a palindrome!")
         else:
             print("not a palindrome")
